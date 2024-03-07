@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="inc/registerhandler.inc.php" method="POST">
+    <form action="inc/controller/registerhandler.inc.php" method="POST">
         <label for="username">Username:</label>
         <input type="text" class="username" name="username">
         <label for="email">Email:</label>

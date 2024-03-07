@@ -95,6 +95,3 @@
             }
         }
     }
-
-    $test  = new VerifyErrors($pdo, "Gabriel", "Gabriel@gmail.com", "gabriel");
-    $test->CallInsertUser();
