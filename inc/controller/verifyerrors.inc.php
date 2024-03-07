@@ -2,6 +2,7 @@
     require_once "../core/connection.inc.php";
     require_once "../model/pushuser.inc.php";
     require_once "../model/query.inc.php";
+    require_once "../view/registererrors.inc.php";
     require_once "insertuser.inc.php";
 
     class VerifyErrors extends DbQuery
@@ -88,7 +89,7 @@
 
         public function CallInsertUser() {
             if ($this->SearchForErrors()) {
-                return var_dump($this->errors);
+                $_SESSION['errors'] = $this->errors;
             } else {
                 $insertuser = new InsertUserDb($this->pdo, $this->username, $this->email, $this->password);
                 $insertuser->InsertUser();
